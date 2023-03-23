@@ -1,2 +1,0 @@
-.gallery{max-width:1140px;grid-gap:12px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));grid-auto-rows:350px;justify-content:center;margin-left:auto;margin-right:auto;display:grid}.photo-card{position:relative;box-shadow:0 1px 3px rgba(0,0,0,.2),0 1px 1px rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12)}.image{width:100%;object-fit:cover;transition:transform var(--animation-duration)var(--timing-function)}.info{justify-content:space-evenly;display:flex}.into-item{flex-direction:column;display:flex}
-/*# sourceMappingURL=index.0e306ecc.css.map */

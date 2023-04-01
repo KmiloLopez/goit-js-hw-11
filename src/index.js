@@ -1,5 +1,6 @@
 console.log("CONFIO EN MI HABILIDADES")
 import Notiflix from 'notiflix';
+const axios = require('axios');
 const doc = document
 const searchBtn = doc.querySelector('button')
 const searchForm = doc.getElementById('search-form')
@@ -39,14 +40,7 @@ searchForm.addEventListener('submit', (e) =>{
     console.log("este es el URL: ", URL)
     newUrl ="https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(enteredText)+"&image_type=photo&orientation=horizontal&safesearch=true"+`&per_page=${perPage}`;
     fetchImage(URL);
-   /*  fetchImage(URL)
-    .then((varA)=>{
-        console.log("que es lo que llego aca?",varA.hits)//aca ya tengo el array de la busqueda
-        printImageCard(varA.hits)
-    })
-    .catch((error)=>console.log(error.message))
-    
-    loadMoreBtn.hidden=false; */
+   
 })
 async function fetchImage(URL){
   try{
@@ -60,26 +54,17 @@ async function fetchImage(URL){
 }
 const fetchImages = async(theUrl)=>{
   
-  const foundArray = await fetch(`${theUrl}`)//busqueda de la url en la API
+  const foundArray = await axios.get(`${theUrl}`)//busqueda de la url en la API
   const foundArrayJson= await foundArray.json()
   return foundArrayJson 
 }
-/* fetchImage (theUrl){
-    return fetch(`${theUrl}`)//busqueda de la url en la API
-    .then(
-        response => {
-          if (!response.ok) {
-            console.log('empty array with response always ok');
-            throw new Error(response.status);  
-               
-          }
-          return response.json();
-
-        }
-      );
-      
-
+/* const fetchImages = async(theUrl)=>{
+  
+  const foundArray = await fetch(`${theUrl}`)//busqueda de la url en la API
+  const foundArrayJson= await foundArray.json()
+  return foundArrayJson 
 } */
+
 function printImageCard(arrayImages){//aca llega el array de lo que encontro la busqueda
     //aca ponemos el if si no encontro nada manda alerta
     const totalphotos = arrayImages.totalHits

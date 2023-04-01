@@ -136,8 +136,7 @@ function printImageCard(arrayImages) {
 /* loadMoreBtn[0].hidden=false; */
 loadMoreBtn.addEventListener('click', () => {
   pageNumber = pageNumber + 1;
-  console.log(pageNumber);
-  console.log('newUrl es:', newUrl + `&page=${pageNumber}`);
+
   newUrl = newUrl + `&page=${pageNumber}`;
   fetchImage(newUrl);
 });

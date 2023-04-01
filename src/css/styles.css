@@ -36,9 +36,9 @@
     margin-top: 50px;
     margin-bottom: 50px;
     background-color: darkmagenta;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    margin-left: 50%;
+    /* margin-right: 50%; */
     color: whitesmoke;
   }
   #search-form{

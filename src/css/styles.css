@@ -1,6 +1,6 @@
 .gallery {
     display: grid;
-    max-width: 1140px;
+    max-width: 1600px; /* //1140px */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-auto-rows: 350px;
     grid-gap: 12px;
@@ -34,6 +34,12 @@
   }
   .load-more{
     margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: darkmagenta;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
   }
   #search-form{
     display: flex;
